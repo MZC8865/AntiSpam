@@ -15,3 +15,6 @@ anti-spam:
     - "sb"
     - "nmsl"
     # 添加更多违规词...
+  
+  # 私信检测配置
+  whisper-check: true             # 是否对私信进行检测（true=检测私信，false=不检测私信）

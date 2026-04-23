@@ -55,11 +55,17 @@
 - `/chat antispam status` - 查看当前配置
 - `/chat antispam reload` - 重新加载配置
 
+### 私信检测命令 ⭐ 新功能
+- `/chat whispercheck on` - 启用私信检测
+- `/chat whispercheck off` - 禁用私信检测
+- `/chat whispercheck` - 查看私信检测状态
+
 ### Tab 补全支持
-- `/chat` + Tab → 补全 `antispam`
+- `/chat` + Tab → 补全 `antispam` 或 `whispercheck`
 - `/chat antispam` + Tab → 显示所有子命令
 - `/chat antispam delay` + Tab → 显示建议值
 - `/chat antispam toggle` + Tab → 显示 `similarity` 和 `profanity`
+- `/chat whispercheck` + Tab → 显示 `on` 和 `off`
 
 ### 配置文件 (config.yml)
 ```yaml
@@ -81,6 +87,9 @@ anti-spam:
     - "sb"
     - "nmsl"
     # 添加更多...
+  
+  # 私信检测
+  whisper-check: true             # 是否检测私信（true=检测，false=不检测）
 ```
 
 ## 检测优先级
@@ -137,3 +146,4 @@ anti-spam:
 
 - [测试指南](TEST_GUIDE.md) - 详细的功能测试说明
 - [违规词过滤说明](PROFANITY_FILTER.md) - 违规词功能详细文档
+- [私信检测功能说明](私信检测功能说明.md) - 私信检测功能详细文档

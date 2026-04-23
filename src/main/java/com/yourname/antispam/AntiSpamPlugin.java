@@ -1,6 +1,13 @@
 package com.yourname.antispam;
 
+import com.yourname.antispam.commands.AntiSpamCommand;
+import com.yourname.antispam.listeners.ChatLimiter;
+import com.yourname.antispam.managers.MuteManager;
+import com.yourname.antispam.utils.ProfanityFilter;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
+
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -19,7 +26,11 @@ public class AntiSpamPlugin extends JavaPlugin {
     private volatile int minLengthForCheck = 3;
     // Profanity filter configuration
     private volatile boolean profanityFilterEnabled = true;
-    private com.yourname.antispam.utils.ProfanityFilter profanityFilter;
+    private ProfanityFilter profanityFilter;
+    // Whisper check configuration
+    private volatile boolean whisperCheckEnabled = true;
+    // Mute manager
+    private MuteManager muteManager;
     
     @Override
     public void onEnable() {
@@ -42,23 +53,29 @@ public class AntiSpamPlugin extends JavaPlugin {
             getLogger().warning("Failed to read plugin.yml from JAR: " + e.getMessage());
         }
         // Register listeners
-        getServer().getPluginManager().registerEvents(new com.yourname.antispam.listeners.ChatLimiter(this), this);
+        getServer().getPluginManager().registerEvents(new ChatLimiter(this), this);
+        getServer().getPluginManager().registerEvents(new com.yourname.antispam.listeners.WhisperLimiter(this), this);
+        getLogger().info("AntiSpam: Registered chat and whisper listeners");
         
         // Load initial config
         saveDefaultConfig();
         loadFromConfig();
         
+        // Initialize mute manager
+        this.muteManager = new MuteManager(this);
+        getLogger().info("AntiSpam: Mute manager initialized");
+        
         // Register command directly with CommandMap for Paper plugins
         try {
-            com.yourname.antispam.commands.AntiSpamCommand cmdExecutor = new com.yourname.antispam.commands.AntiSpamCommand(this);
-            org.bukkit.command.Command cmd = new org.bukkit.command.Command("chat") {
+            AntiSpamCommand cmdExecutor = new AntiSpamCommand(this);
+            Command cmd = new Command("chat") {
                 @Override
-                public boolean execute(org.bukkit.command.CommandSender sender, String label, String[] args) {
+                public boolean execute(CommandSender sender, String label, String[] args) {
                     return cmdExecutor.onCommand(sender, this, label, args);
                 }
                 
                 @Override
-                public java.util.List<String> tabComplete(org.bukkit.command.CommandSender sender, String alias, String[] args) throws IllegalArgumentException {
+                public List<String> tabComplete(CommandSender sender, String alias, String[] args) throws IllegalArgumentException {
                     return cmdExecutor.onTabComplete(sender, this, alias, args);
                 }
             };
@@ -129,8 +146,23 @@ public class AntiSpamPlugin extends JavaPlugin {
         getLogger().info("Profanity filter " + (enabled ? "enabled" : "disabled"));
     }
 
-    public synchronized com.yourname.antispam.utils.ProfanityFilter getProfanityFilter() {
+    public synchronized ProfanityFilter getProfanityFilter() {
         return profanityFilter;
+    }
+
+    // Getters/setters for whisper check configuration
+    public synchronized boolean isWhisperCheckEnabled() {
+        return whisperCheckEnabled;
+    }
+
+    public synchronized void setWhisperCheckEnabled(boolean enabled) {
+        this.whisperCheckEnabled = enabled;
+        getLogger().info("Whisper check " + (enabled ? "enabled" : "disabled"));
+    }
+
+    // Getter for mute manager
+    public MuteManager getMuteManager() {
+        return muteManager;
     }
 
     // Reload config from disk and apply values
@@ -150,14 +182,18 @@ public class AntiSpamPlugin extends JavaPlugin {
         // Load profanity filter settings
         this.profanityFilterEnabled = getConfig().getBoolean("anti-spam.profanity-filter", true);
         List<String> blockedWords = getConfig().getStringList("anti-spam.blocked-words");
-        this.profanityFilter = new com.yourname.antispam.utils.ProfanityFilter(blockedWords);
+        this.profanityFilter = new ProfanityFilter(blockedWords);
+        
+        // Load whisper check setting
+        this.whisperCheckEnabled = getConfig().getBoolean("anti-spam.whisper-check", true);
         
         getLogger().info("AntiSpam config loaded: delayMs=" + antiSpamDelayMs + 
             ", similarityCheck=" + similarityCheckEnabled + 
             ", threshold=" + similarityThreshold + 
             ", minLength=" + minLengthForCheck +
             ", profanityFilter=" + profanityFilterEnabled +
-            ", blockedWords=" + profanityFilter.getBlockedWordCount());
+            ", blockedWords=" + profanityFilter.getBlockedWordCount() +
+            ", whisperCheck=" + whisperCheckEnabled);
     }
     
     // Save a config value to disk

@@ -30,10 +30,29 @@ public class AntiSpamCommand implements CommandExecutor, TabCompleter {
         }
         
         // Check if this is /chat antispam command
-        if (args.length < 1 || !args[0].equalsIgnoreCase("antispam")) {
-            return false; // Let other handlers deal with it
+        if (args.length >= 1 && args[0].equalsIgnoreCase("antispam")) {
+            return handleAntiSpamCommand(sender, args);
         }
         
+        // Check if this is /chat whispercheck command
+        if (args.length >= 1 && args[0].equalsIgnoreCase("whispercheck")) {
+            return handleWhisperCheckCommand(sender, args);
+        }
+        
+        // Check if this is /chat ban command
+        if (args.length >= 1 && args[0].equalsIgnoreCase("ban")) {
+            return handleBanCommand(sender, args);
+        }
+        
+        // Check if this is /chat unban command
+        if (args.length >= 1 && args[0].equalsIgnoreCase("unban")) {
+            return handleUnbanCommand(sender, args);
+        }
+        
+        return false; // Let other handlers deal with it
+    }
+    
+    private boolean handleAntiSpamCommand(CommandSender sender, String[] args) {
         // Check permission
         if (!sender.hasPermission("antispam.admin")) {
             sender.sendMessage("你没有权限使用此命令。");
@@ -105,6 +124,7 @@ public class AntiSpamCommand implements CommandExecutor, TabCompleter {
             sender.sendMessage("- minLengthForCheck: " + plugin.getMinLengthForCheck());
             sender.sendMessage("- profanityFilter: " + (plugin.isProfanityFilterEnabled() ? "启用" : "禁用"));
             sender.sendMessage("- blockedWords: " + plugin.getProfanityFilter().getBlockedWordCount() + " 个");
+            sender.sendMessage("- whisperCheck: " + (plugin.isWhisperCheckEnabled() ? "启用" : "禁用"));
             return true;
         }
         
@@ -125,15 +145,229 @@ public class AntiSpamCommand implements CommandExecutor, TabCompleter {
         sender.sendMessage("/chat antispam reload - 重新加载配置");
         return true;
     }
+    
+    private boolean handleWhisperCheckCommand(CommandSender sender, String[] args) {
+        // Check permission
+        if (!sender.hasPermission("antispam.admin")) {
+            sender.sendMessage("你没有权限使用此命令。");
+            return true;
+        }
+        
+        // /chat whispercheck on
+        if (args.length >= 2 && args[1].equalsIgnoreCase("on")) {
+            plugin.setWhisperCheckEnabled(true);
+            plugin.saveConfigValue("anti-spam.whisper-check", true);
+            sender.sendMessage("私信检测已启用并保存到配置文件");
+            return true;
+        }
+        
+        // /chat whispercheck off
+        if (args.length >= 2 && args[1].equalsIgnoreCase("off")) {
+            plugin.setWhisperCheckEnabled(false);
+            plugin.saveConfigValue("anti-spam.whisper-check", false);
+            sender.sendMessage("私信检测已禁用并保存到配置文件");
+            return true;
+        }
+        
+        // Show current status
+        sender.sendMessage("私信检测状态: " + (plugin.isWhisperCheckEnabled() ? "启用" : "禁用"));
+        sender.sendMessage("用法:");
+        sender.sendMessage("/chat whispercheck on - 启用私信检测");
+        sender.sendMessage("/chat whispercheck off - 禁用私信检测");
+        return true;
+    }
+    
+    private boolean handleBanCommand(CommandSender sender, String[] args) {
+        // Check permission
+        if (!sender.hasPermission("antispam.admin")) {
+            sender.sendMessage("你没有权限使用此命令。");
+            return true;
+        }
+        
+        // /chat ban <player> <time>
+        if (args.length < 3) {
+            sender.sendMessage("用法: /chat ban <玩家名> <时间>");
+            sender.sendMessage("时间格式: 数字+单位 (s=秒, m=分钟, h=小时, d=天)");
+            sender.sendMessage("例如: /chat ban Player 30m (禁言30分钟)");
+            return true;
+        }
+        
+        String playerName = args[1];
+        String timeStr = args[2];
+        
+        // Find player
+        org.bukkit.entity.Player target = plugin.getServer().getPlayer(playerName);
+        if (target == null) {
+            sender.sendMessage("玩家 " + playerName + " 不在线或不存在");
+            return true;
+        }
+        
+        // Parse time
+        long seconds = parseTime(timeStr);
+        if (seconds <= 0) {
+            sender.sendMessage("无效的时间格式: " + timeStr);
+            sender.sendMessage("时间格式: 数字+单位 (s=秒, m=分钟, h=小时, d=天)");
+            sender.sendMessage("例如: 30s, 5m, 2h, 1d");
+            return true;
+        }
+        
+        // Mute player
+        plugin.getMuteManager().mutePlayer(target.getUniqueId(), target.getName(), seconds);
+        String timeFormatted = plugin.getMuteManager().formatTime(seconds);
+        
+        sender.sendMessage("已禁言玩家 " + target.getName() + "，时长：" + timeFormatted);
+        target.sendMessage(org.bukkit.ChatColor.RED + "你已被禁言，时长：" + timeFormatted);
+        
+        return true;
+    }
+    
+    private boolean handleUnbanCommand(CommandSender sender, String[] args) {
+        // Check permission
+        if (!sender.hasPermission("antispam.admin")) {
+            sender.sendMessage("你没有权限使用此命令。");
+            return true;
+        }
+        
+        // /chat unban <player>
+        if (args.length < 2) {
+            sender.sendMessage("用法: /chat unban <玩家名>");
+            return true;
+        }
+        
+        String playerName = args[1];
+        
+        // Find player
+        org.bukkit.entity.Player target = plugin.getServer().getPlayer(playerName);
+        if (target == null) {
+            sender.sendMessage("玩家 " + playerName + " 不在线或不存在");
+            return true;
+        }
+        
+        // Check if player is muted
+        if (!plugin.getMuteManager().isMuted(target.getUniqueId())) {
+            sender.sendMessage("玩家 " + target.getName() + " 没有被禁言");
+            return true;
+        }
+        
+        // Unmute player
+        plugin.getMuteManager().unmutePlayer(target.getUniqueId(), target.getName());
+        
+        sender.sendMessage("已解除玩家 " + target.getName() + " 的禁言");
+        target.sendMessage(org.bukkit.ChatColor.GREEN + "你的禁言已被解除");
+        
+        return true;
+    }
+    
+    /**
+     * Parse time string to seconds.
+     * Format: <number><unit> where unit is s/m/h/d
+     * Examples: 30s, 5m, 2h, 1d
+     */
+    private long parseTime(String timeStr) {
+        if (timeStr == null || timeStr.isEmpty()) {
+            return -1;
+        }
+        
+        timeStr = timeStr.toLowerCase().trim();
+        
+        // Extract number and unit
+        String numberPart = timeStr.replaceAll("[^0-9]", "");
+        String unitPart = timeStr.replaceAll("[0-9]", "");
+        
+        if (numberPart.isEmpty()) {
+            return -1;
+        }
+        
+        try {
+            long number = Long.parseLong(numberPart);
+            
+            // Default to seconds if no unit specified
+            if (unitPart.isEmpty()) {
+                return number;
+            }
+            
+            // Convert based on unit
+            switch (unitPart) {
+                case "s":
+                case "秒":
+                    return number;
+                case "m":
+                case "分":
+                case "分钟":
+                    return number * 60;
+                case "h":
+                case "时":
+                case "小时":
+                    return number * 3600;
+                case "d":
+                case "天":
+                    return number * 86400;
+                default:
+                    return -1;
+            }
+        } catch (NumberFormatException e) {
+            return -1;
+        }
+    }
 
     @Override
     public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {
         List<String> completions = new ArrayList<>();
         
-        // /chat <tab> -> suggest "antispam"
+        // /chat <tab> -> suggest "antispam", "whispercheck", "ban", "unban"
         if (args.length == 1) {
-            if ("antispam".startsWith(args[0].toLowerCase())) {
-                completions.add("antispam");
+            String[] commands = {"antispam", "whispercheck", "ban", "unban"};
+            for (String cmd : commands) {
+                if (cmd.startsWith(args[0].toLowerCase())) {
+                    completions.add(cmd);
+                }
+            }
+            return completions;
+        }
+        
+        // Handle whispercheck tab completion
+        if (args[0].equalsIgnoreCase("whispercheck")) {
+            if (args.length == 2) {
+                String[] options = {"on", "off"};
+                for (String opt : options) {
+                    if (opt.startsWith(args[1].toLowerCase())) {
+                        completions.add(opt);
+                    }
+                }
+            }
+            return completions;
+        }
+        
+        // Handle ban tab completion
+        if (args[0].equalsIgnoreCase("ban")) {
+            if (args.length == 2) {
+                // Suggest online players
+                for (org.bukkit.entity.Player p : plugin.getServer().getOnlinePlayers()) {
+                    if (p.getName().toLowerCase().startsWith(args[1].toLowerCase())) {
+                        completions.add(p.getName());
+                    }
+                }
+            } else if (args.length == 3) {
+                // Suggest time formats
+                String[] suggestions = {"30s", "5m", "10m", "30m", "1h", "2h", "1d"};
+                for (String s : suggestions) {
+                    if (s.startsWith(args[2].toLowerCase())) {
+                        completions.add(s);
+                    }
+                }
+            }
+            return completions;
+        }
+        
+        // Handle unban tab completion
+        if (args[0].equalsIgnoreCase("unban")) {
+            if (args.length == 2) {
+                // Suggest online players
+                for (org.bukkit.entity.Player p : plugin.getServer().getOnlinePlayers()) {
+                    if (p.getName().toLowerCase().startsWith(args[1].toLowerCase())) {
+                        completions.add(p.getName());
+                    }
+                }
             }
             return completions;
         }

@@ -3,9 +3,12 @@
     "minecraft:mined": {
       "minecraft:short_grass": 10
     },
+    "minecraft:picked_up": {
+      "minecraft:snowball": 15
+    },
     "minecraft:used": {
       "minecraft:stone": 155,
-      "minecraft:dark_oak_leaves": 248,
+      "minecraft:dark_oak_leaves": 267,
       "minecraft:hoglin_spawn_egg": 10,
       "minecraft:llama_spawn_egg": 128,
       "minecraft:snowball": 417,
@@ -20,27 +23,24 @@
       "minecraft:oak_leaves": 1
     },
     "minecraft:custom": {
-      "minecraft:time_since_rest": 85312,
-      "minecraft:walk_one_cm": 17703,
-      "minecraft:leave_game": 5,
+      "minecraft:time_since_rest": 95041,
+      "minecraft:walk_one_cm": 19801,
+      "minecraft:leave_game": 18,
       "minecraft:walk_under_water_one_cm": 660,
       "minecraft:damage_taken": 109,
-      "minecraft:damage_dealt": 20,
-      "minecraft:play_time": 85312,
-      "minecraft:jump": 541,
-      "minecraft:time_since_death": 85312,
+      "minecraft:damage_dealt": 125,
+      "minecraft:play_time": 95041,
+      "minecraft:jump": 693,
+      "minecraft:time_since_death": 95041,
       "minecraft:drop": 3,
-      "minecraft:sprint_one_cm": 36026,
+      "minecraft:sprint_one_cm": 42199,
       "minecraft:fall_one_cm": 1800,
       "minecraft:swim_one_cm": 1263,
-      "minecraft:total_world_time": 85312,
-      "minecraft:fly_one_cm": 314271,
-      "minecraft:walk_on_water_one_cm": 532,
-      "minecraft:crouch_one_cm": 4441,
-      "minecraft:sneak_time": 887
-    },
-    "minecraft:picked_up": {
-      "minecraft:snowball": 15
+      "minecraft:total_world_time": 95041,
+      "minecraft:fly_one_cm": 345443,
+      "minecraft:walk_on_water_one_cm": 632,
+      "minecraft:crouch_one_cm": 4446,
+      "minecraft:sneak_time": 897
     }
   },
   "DataVersion": 4671

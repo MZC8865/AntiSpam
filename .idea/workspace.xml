@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="eb6bae83-9706-43ef-b575-2ac6f0acfd70" name="更改" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/9.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.4.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.4.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.4.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.4.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.4.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.4.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/AntiSpam.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/problems/problems-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/problems/problems-report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/paper-plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/paper-plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/AntiSpamCommand.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/AntiSpamPlugin$1.class.uniqueId3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/AntiSpamPlugin.class.uniqueId2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/ChatLimiter.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/bukkit.yml" beforeDir="false" afterPath="$PROJECT_DIR$/run/bukkit.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/commands.yml" beforeDir="false" afterPath="$PROJECT_DIR$/run/commands.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/config/paper-global.yml" beforeDir="false" afterPath="$PROJECT_DIR$/run/config/paper-global.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/config/paper-world-defaults.yml" beforeDir="false" afterPath="$PROJECT_DIR$/run/config/paper-world-defaults.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/help.yml" beforeDir="false" afterPath="$PROJECT_DIR$/run/help.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/ops.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/ops.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/plugins/.paper-remapped/extra-plugins/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/plugins/.paper-remapped/extra-plugins/index.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/plugins/.paper-remapped/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/plugins/.paper-remapped/index.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/plugins/.paper-remapped/libraries/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/plugins/.paper-remapped/libraries/index.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/plugins/.paper-remapped/mappings/reversed/5028247881868F33795961B8387BB1B13C018B83E4523A77C8A8D8EFCD8F6FEE.tiny" beforeDir="false" afterPath="$PROJECT_DIR$/run/plugins/.paper-remapped/mappings/reversed/5028247881868F33795961B8387BB1B13C018B83E4523A77C8A8D8EFCD8F6FEE.tiny" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/plugins/.paper-remapped/unknown-origin/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/plugins/.paper-remapped/unknown-origin/index.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/plugins/AntiSpam/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/run/plugins/AntiSpam/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/plugins/bStats/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/run/plugins/bStats/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/plugins/spark/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/plugins/spark/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/server.properties" beforeDir="false" afterPath="$PROJECT_DIR$/run/server.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/spigot.yml" beforeDir="false" afterPath="$PROJECT_DIR$/run/spigot.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/usercache.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/usercache.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/world/data/raids.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/data/raids.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/world/datapacks/bukkit/pack.mcmeta" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/datapacks/bukkit/pack.mcmeta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/world/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/level.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/world/level.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/level.dat_old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/world/paper-world.yml" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/paper-world.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/world/session.lock" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/session.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/world/stats/29c791a6-b421-3f40-ad2b-613924f9b1c3.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/stats/29c791a6-b421-3f40-ad2b-613924f9b1c3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/world/stats/428a9eb8-eb59-3300-892c-1124ca047d38.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/stats/428a9eb8-eb59-3300-892c-1124ca047d38.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/world/stats/5f78f1ca-39b8-3abb-b982-7e37bed97dc3.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/stats/5f78f1ca-39b8-3abb-b982-7e37bed97dc3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/world/stats/618cb0ab-8f59-3811-afad-31574b3b487c.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/stats/618cb0ab-8f59-3811-afad-31574b3b487c.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/world/stats/76a85934-d1dc-3e22-b48f-18504df540b9.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/stats/76a85934-d1dc-3e22-b48f-18504df540b9.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/world/stats/9df70e84-3251-33fb-9047-d59112057246.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/stats/9df70e84-3251-33fb-9047-d59112057246.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/world/stats/e5f3c748-0ea0-3a62-b5e9-4fef46853cc3.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/stats/e5f3c748-0ea0-3a62-b5e9-4fef46853cc3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/world_nether/DIM-1/data/raids.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/world_nether/DIM-1/data/raids.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/world_nether/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/world_nether/level.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/world_nether/level.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/run/world_nether/level.dat_old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/world_nether/paper-world.yml" beforeDir="false" afterPath="$PROJECT_DIR$/run/world_nether/paper-world.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/world_nether/session.lock" beforeDir="false" afterPath="$PROJECT_DIR$/run/world_nether/session.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/world_the_end/DIM1/data/raids_end.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/world_the_end/DIM1/data/raids_end.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/world_the_end/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/world_the_end/level.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/world_the_end/level.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/run/world_the_end/level.dat_old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/world_the_end/paper-world.yml" beforeDir="false" afterPath="$PROJECT_DIR$/run/world_the_end/paper-world.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/world_the_end/session.lock" beforeDir="false" afterPath="$PROJECT_DIR$/run/world_the_end/session.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yourname/antispam/AntiSpamPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yourname/antispam/AntiSpamPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yourname/antispam/commands/AntiSpamCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yourname/antispam/commands/AntiSpamCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yourname/antispam/listeners/ChatLimiter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yourname/antispam/listeners/ChatLimiter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/paper-plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/paper-plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="C:\Users\maojf\Documents\GitHub\AntiSpam">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="AntiSpam" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="C:\Users\maojf\.gradle\wrapper\dists\gradle-9.4.1-bin\arn2x92ynaizyzdaamcbpbhtj\gradle-9.4.1" javaHome="C:\Program Files\Microsoft\jdk-21.0.9.10-hotspot" gradleVersion="9.4.1" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="3ClObX7tquE4HrnYXmR3euAya73" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.AntiSpam [runServer --args=\"nogui\"].executor": "Run",
+    "Gradle.Build.executor": "Run",
+    "Gradle.C:/Users/maojf/Documents/GitHub/AntiSpam [wrapper --gradle-version=latest].executor": "Run",
+    "Gradle.Run.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/maojf/Documents/GitHub/AntiSpam/run/plugins",
+    "to.speed.mode.migration.done": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\maojf\Documents\GitHub\AntiSpam\run\plugins" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\maojf\Documents\GitHub\AntiSpam\run\plugins" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="./gradlew runServer --args=&quot;nogui&quot;" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Gradle.Run">
+    <configuration name="AntiSpam [runServer --args=&quot;nogui&quot;]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="runServer" />
+            <option value="--args=&quot;nogui&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="Build" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" value="Build" />
+        <option name="externalProjectPath" value="C:\Users\maojf\Documents\GitHub\AntiSpam" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="Run" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" value="Run" />
+        <option name="externalProjectPath" value="C:\Users\maojf\Documents\GitHub\AntiSpam" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="runServer" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="mcdev-temp-root" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="mcdev-temp-root" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.AntiSpam [runServer --args=&quot;nogui&quot;]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.27397.103" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="eb6bae83-9706-43ef-b575-2ac6f0acfd70" name="更改" comment="" />
+      <created>1776956763007</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1776956763007</updated>
+    </task>
+    <servers />
+  </component>
+</project>

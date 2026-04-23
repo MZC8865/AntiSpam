@@ -39,6 +39,15 @@ public class ChatLimiter implements Listener {
         long now = System.currentTimeMillis();
         String message = event.getMessage();
 
+        // Mute check: highest priority
+        if (plugin.getMuteManager().isMuted(id)) {
+            event.setCancelled(true);
+            long remaining = plugin.getMuteManager().getRemainingMuteTime(id);
+            String timeStr = plugin.getMuteManager().formatTime(remaining);
+            event.getPlayer().sendMessage(ChatColor.RED + "你已被禁言，剩余时间：" + timeStr);
+            return;
+        }
+
         // Profanity filter: check for blocked words first (highest priority)
         if (plugin.isProfanityFilterEnabled()) {
             if (plugin.getProfanityFilter().containsProfanity(message)) {

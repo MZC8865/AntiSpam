@@ -2,3 +2,17 @@ anti-spam:
   delay-ms: 3000
   window-ms: 10000
   max-messages: 5
+  blocked-words:
+  - 傻逼
+  - fuck
+  - shit
+  - 身份证
+  - 大头
+  - sb
+  - 死妈
+  - 死全家
+  - 操你妈
+  - 全户
+  - 全户
+  - 全户
+  whisper-check: true

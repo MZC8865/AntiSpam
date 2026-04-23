@@ -1,0 +1,6 @@
+name: AntiSpam
+version: '${version}'
+
+main: com.yourname.antispam.AntiSpamPlugin
+api-version: '1.21'
+load: POSTWORLD

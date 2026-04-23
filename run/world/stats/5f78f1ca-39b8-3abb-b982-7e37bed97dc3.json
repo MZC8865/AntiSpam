@@ -1,0 +1,47 @@
+{
+  "stats": {
+    "minecraft:mined": {
+      "minecraft:short_grass": 10
+    },
+    "minecraft:used": {
+      "minecraft:stone": 155,
+      "minecraft:dark_oak_leaves": 248,
+      "minecraft:hoglin_spawn_egg": 10,
+      "minecraft:llama_spawn_egg": 128,
+      "minecraft:snowball": 417,
+      "minecraft:oak_leaves": 3,
+      "minecraft:ender_pearl": 14,
+      "minecraft:snow_golem_spawn_egg": 1398,
+      "minecraft:skeleton_spawn_egg": 7
+    },
+    "minecraft:dropped": {
+      "minecraft:stone": 1,
+      "minecraft:dark_oak_leaves": 1,
+      "minecraft:oak_leaves": 1
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 85312,
+      "minecraft:walk_one_cm": 17703,
+      "minecraft:leave_game": 5,
+      "minecraft:walk_under_water_one_cm": 660,
+      "minecraft:damage_taken": 109,
+      "minecraft:damage_dealt": 20,
+      "minecraft:play_time": 85312,
+      "minecraft:jump": 541,
+      "minecraft:time_since_death": 85312,
+      "minecraft:drop": 3,
+      "minecraft:sprint_one_cm": 36026,
+      "minecraft:fall_one_cm": 1800,
+      "minecraft:swim_one_cm": 1263,
+      "minecraft:total_world_time": 85312,
+      "minecraft:fly_one_cm": 314271,
+      "minecraft:walk_on_water_one_cm": 532,
+      "minecraft:crouch_one_cm": 4441,
+      "minecraft:sneak_time": 887
+    },
+    "minecraft:picked_up": {
+      "minecraft:snowball": 15
+    }
+  },
+  "DataVersion": 4671
+}

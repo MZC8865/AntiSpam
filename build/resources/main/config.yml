@@ -1,0 +1,17 @@
+anti-spam:
+  delay-ms: 20
+  # 相似度检测配置
+  similarity-check: true          # 是否启用相似度检测
+  similarity-threshold: 0.8       # 相似度阈值（0.0-1.0，0.8表示80%相似）
+  min-length-for-check: 3         # 最小检测长度（消息长度小于此值不检测相似度）
+  
+  # 违规词过滤配置
+  profanity-filter: true          # 是否启用违规词过滤
+  blocked-words:                  # 违规词列表（支持中英文）
+    - "傻逼"
+    - "fuck"
+    - "shit"
+    - "草泥马"
+    - "sb"
+    - "nmsl"
+    # 添加更多违规词...

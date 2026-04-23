@@ -1,0 +1,4 @@
+anti-spam:
+  delay-ms: 3000
+  window-ms: 10000
+  max-messages: 5

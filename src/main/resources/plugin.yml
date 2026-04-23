@@ -1,0 +1,16 @@
+name: AntiSpam
+version: 1.0
+main: com.yourname.antispam.AntiSpamPlugin
+api-version: "1.21"
+authors:
+- YourName
+
+commands:
+  chat:
+    description: Chat management commands
+    usage: /chat antispam <subcommand>
+
+permissions:
+  antispam.admin:
+    description: Allow configuring AntiSpam settings
+    default: op
